@@ -96,8 +96,6 @@ public class ProductSalesApplication extends JFrame {
 
         int[][] sales = productSales.GetProductSales();
         String[] names = productSales.getProductNames();
-        int salesLimit = productSales.getSalesLimit();
-
         for (int year = 0; year < sales.length; year++) {
             builder.append("Sales for year ").append(year + 1).append("\n");
             for (int product = 0; product < sales[year].length; product++) {
@@ -108,11 +106,10 @@ public class ProductSalesApplication extends JFrame {
         }
 
         builder.append("Total Sales: ").append(productSales.GetTotalSales()).append("\n");
-        builder.append("Average Sales: ").append(Math.round(productSales.GetAverageSales())).append("\n");
-        builder.append("Sales over limit ").append(salesLimit).append(": ")
-                .append(productSales.GetSalesOverLimit()).append("\n");
-        builder.append("Sales under limit ").append(salesLimit).append(": ")
-                .append(productSales.GetSalesUnderLimit()).append("\n");
+        builder.append("Average Sales: ").append((int) Math.floor(productSales.GetAverageSales())).append("\n");
+        builder.append("Sales over limit: ").append(productSales.GetSalesOverLimit()).append("\n");
+        builder.append("Sales under limit: ").append(productSales.GetSalesUnderLimit()).append("\n");
+        builder.append("Years Processed: ").append(productSales.GetProductsProcessed()).append("\n");
 
         outputArea.setText(builder.toString());
         yearsLabel.setText("Years Processed: " + productSales.GetProductsProcessed());
@@ -125,7 +122,12 @@ public class ProductSalesApplication extends JFrame {
         }
         StringBuilder builder = new StringBuilder();
         builder.append("DATA LOG\n\n");
-        builder.append(outputArea.getText());
+        builder.append("***********************************\n\n");
+        builder.append("Total Sales: ").append(productSales.GetTotalSales()).append("\n");
+        builder.append("Average Sales: ").append((int) Math.floor(productSales.GetAverageSales())).append("\n");
+        builder.append("Sales over limit: ").append(productSales.GetSalesOverLimit()).append("\n");
+        builder.append("Sales under limit: ").append(productSales.GetSalesUnderLimit()).append("\n");
+        builder.append("***********************************\n\n");
         try {
             Files.writeString(Path.of("data.txt"), builder.toString());
             JOptionPane.showMessageDialog(this, "Product data saved to data.txt");

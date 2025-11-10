@@ -1,16 +1,10 @@
 DATA LOG
 
-Sales for year 1
-Microphone: 300
-Speakers: 150
-Mixing Desk: 700
-
-Sales for year 2
-Microphone: 250
-Speakers: 200
-Mixing Desk: 600
+***********************************
 
 Total Sales: 2200
-Average Sales: 367
-Sales over limit 500: 2
-Sales under limit 500: 4
+Average Sales: 366
+Sales over limit: 2
+Sales under limit: 4
+***********************************
+

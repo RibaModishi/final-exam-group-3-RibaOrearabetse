@@ -24,7 +24,7 @@ public class Question1App {
         System.out.println("PRODUCT SALES REPORT - 2025");
         System.out.println("------------------------------");
         System.out.printf("Total Sales: %.0f%n", totalSales);
-        System.out.printf("Average Sales: %d%n", Math.round(averageSales));
+        System.out.printf("Average Sales: %d%n", (int) Math.floor(averageSales));
         System.out.printf("Maximum sales: %.0f%n", maximumSale);
         System.out.printf("Minimum sales: %.0f%n", minimumSale);
     }
