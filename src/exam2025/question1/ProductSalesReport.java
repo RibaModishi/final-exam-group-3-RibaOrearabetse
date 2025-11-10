@@ -1,9 +1,9 @@
-package exam2025;
+package exam2025.question1;
 
 import java.util.Arrays;
 
 // Q1.2 handles sales maths
-public class ProductSalesReport implements IProduct {
+public class ProductSalesReport implements ProductSales {
 
     private final double[][] salesByYearAndQuarter;
 

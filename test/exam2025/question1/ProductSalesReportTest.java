@@ -1,4 +1,4 @@
-package exam2025;
+package exam2025.question1;
 
 import static org.junit.Assert.assertEquals;
 
